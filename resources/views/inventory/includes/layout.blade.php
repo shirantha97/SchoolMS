@@ -120,6 +120,59 @@
             box-shadow: 5px 5px black;
         }
 
+
+
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+
+        .card1 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            background-color: darkgreen;
+            width: auto;
+            height: 335px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card1:hover {
+            /*box-shadow: 0 32px 16px 0 rgba(0,0,0,0.2);*/
+            box-shadow: 10px 10px black;
+        }
+        .image{
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 50%;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .imageholder{
+            padding-top: 25px;
+        }
+
+        .cardheader{
+            padding-top: 15px;
+            text-shadow: whitesmoke;
+            font-size: x-large;
+        }
+
+
     </style>
 </head>
 <body style="width: auto;height: auto">

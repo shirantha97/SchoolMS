@@ -1,24 +1,16 @@
 @extends('layout')
 @section('content')
-    <div class="container" style="margin-top:10px">
-        @if(count($orders)>0)
-            <div class="text-center">
-                <h2 class="display-5 text-center" style="font-size:4vw;">
-                    <strong>Orders </strong>
-                </h2>
-            </div>
-        @else
-            <div class="text-center">
-                <h2 class="display-5 text-center" style="font-size:4vw;">
-                    <strong> No Orders </strong>
-                </h2>
-            </div>
-        @endif
-        @if(count($orders)>0)
-            <div class="container" style="margin-top: 30px">
-                <div class="container pull-right">
-                    <a href="/orders/create" class="btn btn-outline-info text1" style="background-color: limegreen">AddOrders</a>
-                </div>
+    <div class="container" style="margin-top:20px">
+        <div class="text-center">
+            <h2 class="display-5 text-center" style="font-size:4vw;">
+                <strong>Orders </strong>
+            </h2>
+        </div>
+        <div class="container pull-right">
+            <a href="/orders/create" class="btn btn-outline-info text1" style="background-color: limegreen">Orders</a>
+        </div>
+        <div class="container" style="margin-top: 30px">
+            @if(count($orders)>0)
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
@@ -53,44 +45,30 @@
                     @endforeach
                     </tbody>
                 </table>
-                <div style="margin-top: 20px">
-                    <a href="/inventory" class="btn btn-outline-primary text1">INVENTORY DASHBOARD</a>
-                </div>
-            </div>
-        @else
-            <div class="container">
-                <div class="container-box" style="width: auto;height: 300px">
-                    <div class="img-responsive">
-                        <img src="{{asset('images/inventory_order.gif')}}" style="width: 100%;height:300px;">
+                @else
+                    <div class="text-center text1 text-justify text-uppercase">
+                        No orders
                     </div>
-                </div>
-                <div style="margin-top: 20px">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <a href="/inventory" class="btn btn-primary text1">INVENTORY DASHBOARD</a>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
+            @endif
+            <div>
+                <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                {{--@if(\Illuminate\Support\Facades\Auth::user()->id == 1)--}}
+                {{--<button class="btn btn-danger text1" type="submit" onclick="--}}
+                {{--var result = confirm('Are you sure you want to reset the table data? ');--}}
+                {{--if(result){--}}
+                {{--event.preventDefault();--}}
+                {{--document.getElementById('delete').submit();--}}
+                {{--}--}}
+
+                {{--"> Reset Table Data--}}
+                {{--<form id="delete"--}}
+                {{--action="{{action('Ordercontroller@truncate')}}"--}}
+                {{--method="get" style="display:none">--}}
+                {{--{{csrf_field()}}--}}
+                {{--</form>--}}
+                {{--</button>--}}
+                {{--@endif--}}
             </div>
-        @endif
-
-        {{--@if(\Illuminate\Support\Facades\Auth::user()->id == 1)--}}
-        {{--<button class="btn btn-danger text1" type="submit" onclick="--}}
-        {{--var result = confirm('Are you sure you want to reset the table data? ');--}}
-        {{--if(result){--}}
-        {{--event.preventDefault();--}}
-        {{--document.getElementById('delete').submit();--}}
-        {{--}--}}
-
-        {{--"> Reset Table Data--}}
-        {{--<form id="delete"--}}
-        {{--action="{{action('Ordercontroller@truncate')}}"--}}
-        {{--method="get" style="display:none">--}}
-        {{--{{csrf_field()}}--}}
-        {{--</form>--}}
-        {{--</button>--}}
-        {{--@endif--}}
-    </div>
-
+        </div>
     </div>
 @endsection
