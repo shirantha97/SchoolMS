@@ -66,7 +66,7 @@
 
 
             <div class="col-md-4" >
-               <div class="card1 text1">
+               <div class="card1">
                   <div class="card-header" style="background-color: black;height: 90px">
                      <h3 class=" card-title text-justify text-uppercase text-center cardheader" style="color: white;margin-top: auto;margin-bottom: auto"><strong>School Resources</strong></h3>
                   </div>
