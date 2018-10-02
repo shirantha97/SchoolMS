@@ -134,7 +134,7 @@ class Ordercontroller extends Controller
      */
     public function destroy($id)
     {
-        $user = Auth::user()->id;
+        $user = Auth::user()->role_id;
         $empid = Orders::find($id);
         if ($user == $empid->empid) {
             DB::table('orders')->where('id', '=', $id)->delete();

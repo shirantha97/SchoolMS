@@ -1,14 +1,24 @@
 @extends('layout')
 @section('content')
     <div class="container" style="margin-top:20px">
-        <div class="text-center">
-            <h2 class="display-5 text-center" style="font-size:4vw;">
-                <strong>Orders </strong>
-            </h2>
-        </div>
+        @if(count($orders)>0)
+            <div class="text-center">
+                <h2 class="display-5 text-center" style="font-size:4vw;">
+                    <strong>Orders </strong>
+                </h2>
+            </div>
+        @else
+            <div class="text-center">
+                <h2 class="display-5 text-center" style="font-size:4vw;">
+                    <strong> No Orders </strong>
+                </h2>
+            </div>
+        @endif
         <div class="container pull-right">
-            <a href="/orders/create" class="btn btn-outline-info text1" style="background-color: limegreen">Orders</a>
+            <a href="/orders/create" class="btn btn-outline-info text1"
+               style="background-color: limegreen">Add Orders</a>
         </div>
+
         <div class="container" style="margin-top: 30px">
             @if(count($orders)>0)
                 <table class="table table-striped table-hover">
@@ -45,30 +55,17 @@
                     @endforeach
                     </tbody>
                 </table>
-                @else
-                    <div class="text-center text1 text-justify text-uppercase">
-                        No orders
+                <div>
+                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                </div>
+            @else
+                <div class="col-md-6">
+                    <div class="img-responsive">
+                        <img src="{{asset('images/inventory_order.gif')}}">
                     </div>
-            @endif
-            <div>
-                <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
-                {{--@if(\Illuminate\Support\Facades\Auth::user()->id == 1)--}}
-                {{--<button class="btn btn-danger text1" type="submit" onclick="--}}
-                {{--var result = confirm('Are you sure you want to reset the table data? ');--}}
-                {{--if(result){--}}
-                {{--event.preventDefault();--}}
-                {{--document.getElementById('delete').submit();--}}
-                {{--}--}}
+                </div>
 
-                {{--"> Reset Table Data--}}
-                {{--<form id="delete"--}}
-                {{--action="{{action('Ordercontroller@truncate')}}"--}}
-                {{--method="get" style="display:none">--}}
-                {{--{{csrf_field()}}--}}
-                {{--</form>--}}
-                {{--</button>--}}
-                {{--@endif--}}
-            </div>
+            @endif
         </div>
     </div>
 @endsection
