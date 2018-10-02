@@ -92,24 +92,26 @@
                             <div class="container-fluid"
                                  style="background-color: #35813b; padding: 15px;border-radius: 10px"
                             ">
+                        @if(Auth()->user())
                             <!-- Comments Form -->
-                            <div class="card my-4" style="background: #4db949;border-radius: 10px">
+                                <div class="card my-4" style="background: #4db949;border-radius: 10px">
 
-                                <div class="card-body">
-                                    <form method="post" action='/Event/{{$event->id}}/comment'>
-                                        <h5 class="card-header">Leave a Comment:</h5>
+                                    <div class="card-body">
+                                        <form method="post" action='/Event/{{$event->id}}/comment'>
+                                            <h5 class="card-header">Leave a Comment:</h5>
 
-                                        <label type="hidden">{{csrf_field()}}</label>
+                                            <label type="hidden">{{csrf_field()}}</label>
 
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="body" rows="3"></textarea>
-                                        </div>
-                                        <button type="Submit" class="btn btn-primary">Submit</button>
-                                    </form>
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="body" rows="3"></textarea>
+                                            </div>
+                                            <button type="Submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
+                        @endif
 
-                            <!-- Single Comment -->
+                        <!-- Single Comment -->
                             <div>
                                 @foreach($event->comments as $comments)
                                     <div class="media mb-4 col-md-10 cmt">
@@ -141,17 +143,17 @@
 
 
                         <?php
-//                        $soc = \App\User::where('email', $socid->email)->get();
-//
-//                        $socid = \App\Society::where('id', $event->society_id)->first();
-//                        $user = \App\User::where('email', $socid->email)->first();
+                        //                        $soc = \App\User::where('email', $socid->email)->get();
+                        //
+                        //                        $socid = \App\Society::where('id', $event->society_id)->first();
+                        //                        $user = \App\User::where('email', $socid->email)->first();
                         ?>
 
                         @if(auth()->user())
-
-                            @if(auth()->user()->id == $event->user_id || auth()->user()->id == $user->id)
+                            @if(auth()->user()->id == $event->user_id )
                                 <div class="btn-group-lg" style="margin: 1%;">
-                                    <button class="btn bg-info " style="width: 45%; border-radius: 50%;" type="submit"><a
+                                    <button class="btn bg-info " style="width: 45%; border-radius: 50%;" type="submit">
+                                        <a
                                                 class="text-white"
                                                 href="{{ action('EventController@edit',[$event->id]) }}">Edit Event</a>
                                     </button>

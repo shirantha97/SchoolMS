@@ -203,8 +203,8 @@
                                                     <img src="/storage/img/{{$sport->image}}"
                                                          style="width: 250px; height: 200px">
                                                     <div style="margin: 5%">
-                                                        <h4 class="card-header">About {{$sport->title}}</h4>
-                                                        <div class="card-body" style="font-family: 'Hobo Std'">
+                                                        <h4 class="card-header" style="font-family: 'Hobo Std'; background-color:#a8a8a8">About {{$sport->title}}</h4>
+                                                        <div class="card-body" style="font-family: 'Hobo Std'; background-color:lightgrey">
                                                             {{$sport->description}}
                                                         </div>
                                                     </div>

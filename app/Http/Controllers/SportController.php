@@ -139,15 +139,15 @@ class SportController extends Controller
     {
 
         $this->validate(request(), [
-            'title' => 'required',
+//            'title' => 'required',
 //            'description' => 'required',
-            'detailed_Description' => 'required',
-            'venue' => 'required',
-            'from_grade' => 'required|integer|min:0|max:13',
-            'to_grade' => 'required|integer|min:0|max:13',
-            'image' => 'required',
-            'practicesOn' => 'required',
-            'gender' => 'required'
+//            'detailed_Description' => 'required',
+//            'venue' => 'required',
+//            'from_grade' => 'required|integer|min:0|max:13',
+//            'to_grade' => 'required|integer|min:0|max:13',
+//            'image' => 'required',
+//            'practicesOn' => 'required',
+//            'gender' => 'required'
         ]);
 
         $weekdays = $request->practicesOn;
@@ -256,9 +256,8 @@ class SportController extends Controller
             DB::table('sport_user')->where('user_id', $user->id )
 
                 ->where('sport_id',$sport->id )
-                ->delete()
-                ->where('sport_id',$sport->id )
                 ->delete();
+
 
 
             return view('sports.show')->with('sport' , $sport)->with('success', "User Un-Enrolled");
