@@ -181,7 +181,7 @@
     <div style="margin: 15px">
         @yield('content')
     </div>
-    <div>
+    <div style="margin-top: 30px">
         @include('include.footer')
     </div>
 

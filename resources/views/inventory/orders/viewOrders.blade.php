@@ -64,8 +64,11 @@
                         <img src="{{asset('images/inventory_order.gif')}}">
                     </div>
                 </div>
-
+                <div>
+                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                </div>
             @endif
+
         </div>
     </div>
 @endsection
