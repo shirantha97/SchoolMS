@@ -43,7 +43,7 @@ class Inventoryexpenses extends Controller
      */
     public function create()
     {
-        $user = Auth::user()->id;
+        $user = Auth::user()->role_id;
         if ($user == 1) {
             $suppliers = suppliers::all();
             $data = array(
@@ -272,7 +272,7 @@ class Inventoryexpenses extends Controller
      */
     public function destroy($id)
     {
-        $user = Auth::user()->id;
+        $user = Auth::user()->role_id;
         $expenses = Inventory_expense::find($id);
         if ($user == '1') {
             $expenses->delete();
