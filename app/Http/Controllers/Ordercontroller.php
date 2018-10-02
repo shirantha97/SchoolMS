@@ -43,8 +43,6 @@ class Ordercontroller extends Controller
         $sports = DB::table('inventory_sports')->where('amount', '>', 10)->pluck('name');
         $res = DB::table('resources')->where('amount', '>', 10)->pluck('name');
 
-
-
         return view('inventory.orders.addorder')->with('id', $id)
             ->with('labs', $labs)
             ->with('st', $st)
@@ -68,29 +66,23 @@ class Ordercontroller extends Controller
         $orders->items = $request->input('items');
         $orders->quantity = $request->input('qty');
         $orders->type = $request->input('type');
-        $emp = $request->input('empID');
+
         $type = $request->input('type');
         $name = $request->input('items');
         $qty = $request->input('qty');
 
         $st = DB::table('stationaries')->pluck('name');
         $res = DB::table('resources')->pluck('name');
-        $sp = DB::table('sports')->pluck('name');
+        $sp = DB::table('inventory_sports')->pluck('name');
         $lab = DB::table('labs')->pluck('name');
 
 
-        if (DB::table('orders')->where('empid','=',$emp)->where('items','=',$name)->exists()){
-            return back()->with('error','There is an order placed by you for this item please chec the order list');
+        if ($qty > 0) {
+            $orders->save();
+            return redirect()->back()->with('success', 'Order was placed successfully');
+        } else {
+            return redirect()->back()->with('error', 'Enter the correct quantity');
         }
-        else{
-            if ($qty > 0) {
-                $orders->save();
-                return redirect()->back()->with('success', 'Order was placed successfully');
-            } else {
-                return redirect()->back()->with('error', 'Enter the correct quantity');
-            }
-        }
-
 
 
     }

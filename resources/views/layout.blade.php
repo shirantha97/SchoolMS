@@ -37,8 +37,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
 
-    {{--Charts--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
 
     {{--live search--}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -48,10 +48,11 @@
 
 
 
+
     <style>
         body {
 {{--            background-image: url("{{asset('images/bg1.jpg')}}");--}}
-                 background-color: white;
+                 background-color: #e8ffe6;
 
         }
 
@@ -125,9 +126,9 @@
         .card1 {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
-            background-color: darkgreen;
+            background-color: #9d9d9d;
             width: auto;
-            height: 335px;
+            height: 380px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -176,32 +177,20 @@
     </style>
 
 </head>
-<body style="width: auto;height: auto">
+<body >
 
 <div>
-
     <div>
         @include('include.navbar')
     </div>
-
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <div class="container-box text-center" style="margin-top: 15px;width: 100%;">
-                    @include('include.error')
-                    @include('include.success')
-                    @include('inventory.messages.message')
-                </div>
-            </div>
-            <div class="col-3"></div>
-        </div>
+    <div class="container" style="padding: 1%">
+        @include('include.error')
+        @include('include.success')
     </div>
     <div style="margin: 15px">
         @yield('content')
     </div>
-
-    <div style="margin-top: 50px">
+    <div style="margin-top: 30px">
         @include('include.footer')
     </div>
 

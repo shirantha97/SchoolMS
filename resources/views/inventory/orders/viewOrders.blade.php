@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    <div class="container" style="margin-top:10px">
+    <div class="container" style="margin-top:20px">
         @if(count($orders)>0)
             <div class="text-center">
                 <h2 class="display-5 text-center" style="font-size:4vw;">
@@ -14,11 +14,18 @@
                 </h2>
             </div>
         @endif
-        @if(count($orders)>0)
-            <div class="container" style="margin-top: 30px">
-                <div class="container pull-right">
-                    <a href="/orders/create" class="btn btn-outline-info text1" style="background-color: limegreen">AddOrders</a>
+        <div class="container pull-right">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/orders/create" class="btn btn-outline-info text1"
+                       style="background-color: limegreen">Add Orders</a>
                 </div>
+            </div>
+
+        </div>
+
+        <div class="container" style="margin-top: 30px">
+            @if(count($orders)>0)
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
@@ -53,44 +60,26 @@
                     @endforeach
                     </tbody>
                 </table>
-                <div style="margin-top: 20px">
-                    <a href="/inventory" class="btn btn-outline-primary text1">INVENTORY DASHBOARD</a>
+                <div style="margin-top: 15px">
+                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
                 </div>
-            </div>
-        @else
-            <div class="container">
-                <div class="container-box" style="width: auto;height: 300px">
-                    <div class="img-responsive">
-                        <img src="{{asset('images/inventory_order.gif')}}" style="width: 100%;height:300px;">
+            @else
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{asset('images/inventory_order.gif')}}">
                     </div>
                 </div>
-                <div style="margin-top: 20px">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <a href="/inventory" class="btn btn-primary text1">INVENTORY DASHBOARD</a>
+
+                <div style="margin-top: 15px">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-6">
+                            <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                        </div>
                     </div>
-                    <div class="col-md-4"></div>
                 </div>
-            </div>
-        @endif
+            @endif
 
-        {{--@if(\Illuminate\Support\Facades\Auth::user()->id == 1)--}}
-        {{--<button class="btn btn-danger text1" type="submit" onclick="--}}
-        {{--var result = confirm('Are you sure you want to reset the table data? ');--}}
-        {{--if(result){--}}
-        {{--event.preventDefault();--}}
-        {{--document.getElementById('delete').submit();--}}
-        {{--}--}}
-
-        {{--"> Reset Table Data--}}
-        {{--<form id="delete"--}}
-        {{--action="{{action('Ordercontroller@truncate')}}"--}}
-        {{--method="get" style="display:none">--}}
-        {{--{{csrf_field()}}--}}
-        {{--</form>--}}
-        {{--</button>--}}
-        {{--@endif--}}
-    </div>
-
+        </div>
     </div>
 @endsection
