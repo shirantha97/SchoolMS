@@ -20,7 +20,7 @@ class Suppliercontroller extends Controller
      */
     public function index()
     {
-        $user = Auth::user()->role_id;
+        $user = Auth::user()->id;
         $suppliers = suppliers::all();
         if($user == 1){
             return view('.inventory.supplier.supplier')->with('suppliers', $suppliers);
