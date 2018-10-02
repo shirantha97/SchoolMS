@@ -15,8 +15,13 @@
             </div>
         @endif
         <div class="container pull-right">
-            <a href="/orders/create" class="btn btn-outline-info text1"
-               style="background-color: limegreen">Add Orders</a>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/orders/create" class="btn btn-outline-info text1"
+                       style="background-color: limegreen">Add Orders</a>
+                </div>
+            </div>
+
         </div>
 
         <div class="container" style="margin-top: 30px">
@@ -55,17 +60,23 @@
                     @endforeach
                     </tbody>
                 </table>
-                <div>
+                <div style="margin-top: 15px">
                     <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
                 </div>
             @else
-                <div class="col-md-6">
-                    <div class="img-responsive">
+                <div class="row">
+                    <div class="col-md-2">
                         <img src="{{asset('images/inventory_order.gif')}}">
                     </div>
                 </div>
-                <div>
-                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+
+                <div style="margin-top: 15px">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-6">
+                            <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                        </div>
+                    </div>
                 </div>
             @endif
 

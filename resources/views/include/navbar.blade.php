@@ -74,7 +74,7 @@
                     <li class="btn nav-item " style="color: white; padding-top: 12px;">
                         @if(Auth()->user())
                             @if(\Illuminate\Support\Facades\Auth::user()->role_id == 1 || \Illuminate\Support\Facades\Auth::user()->role_id == 2)
-                                <a href="/inventory" style="color: white;text-decoration: none" >Inventory</a>
+                                <a href="/inventory" style="color: white;text-decoration: none " >Inventory</a>
                             @endif
                         @endif
                     </li>

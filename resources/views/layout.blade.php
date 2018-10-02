@@ -119,7 +119,7 @@
             transition: 0.3s;
             background-color: #9d9d9d;
             width: auto;
-            height: 335px;
+            height: 380px;
             margin-left: auto;
             margin-right: auto;
         }
