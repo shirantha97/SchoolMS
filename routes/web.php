@@ -184,7 +184,5 @@ Route::get('/live_searchB/actionB', 'LiveSearchB@actionB')->name('live_searchB.a
 Route::get('/dynamic_pdf', 'DynamicPDFController@index');
 
 Route::get('/dynamic_pdf/pdf', 'DynamicPDFController@pdf');
-Route::get('/dynamic_pdfc', 'DynamicPDFCController@index');
 
-Route::get('/dynamic_pdfc/pdf', 'DynamicPDFCController@pdf');
 
