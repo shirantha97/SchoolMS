@@ -7,7 +7,7 @@
             </h2>
         </div>
         <div class="container" style="width: 50%;">
-            {!! Form::open(['action' => ['InventoryExpenses@update',$expenses->invoiceID],'method' => 'POST', 'class'=> 'form-signin text-center']) !!}
+            {!! Form::open(['action' => ['Inventoryexpenses@update',$expenses->invoiceID],'method' => 'POST', 'class'=> 'form-signin text-center']) !!}
             <input name="_method" type="hidden" value="PATCH">
 
             <div class="form-group form-row">
