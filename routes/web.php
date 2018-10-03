@@ -71,10 +71,6 @@ Route::delete('Society/removeStudent' , 'SocietyController@removeStudent');
 Route::resource('Society' , 'SocietyController');
 
 
-Route::get('eventAdmin' , 'EventAdminController@eventAdmin');
-Route::get('eventAdminHome' , 'EventAdminController@eventAdminHome');
-Route::get('societyAdmin' , 'EventAdminController@societyAdmin');
-Route::get('sportAdmin' , 'EventAdminController@sportAdmin');
 //End of Event Routes
 
 
