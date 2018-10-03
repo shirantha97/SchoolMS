@@ -65,16 +65,16 @@
                 </div>
             @else
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-12 text-center">
                         <img src="{{asset('images/inventory_order.gif')}}">
                     </div>
                 </div>
 
                 <div style="margin-top: 15px">
                     <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-6">
+                        <div class="col-md-12 text-center">
                             <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+
                         </div>
                     </div>
                 </div>

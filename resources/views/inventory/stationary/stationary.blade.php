@@ -87,10 +87,9 @@
                 </div>
             @else
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-5">
+                    <div class="col-md-12">
                         <div class="text-center text-uppercase text-danger">
-                            <h2 class="display-5" style="font-size:4vw;">
+                            <h2 class="display-5" style="font-size:3vw;">
                                 <strong>No Items available</strong>
                             </h2>
                         </div>
@@ -98,8 +97,7 @@
                 </div>
                 <div style="margin-top: 15px">
                     <div class="row">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-6">
+                        <div class="col-md-12 text-center">
                             <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
                         </div>
                     </div>
