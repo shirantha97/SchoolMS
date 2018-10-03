@@ -15,23 +15,28 @@
             </div>
 
             <div class="form-group form-row">
-                <div>
-                    {!! Form::Label('item', 'Product ID :-',['class'=>'text1']) !!}
-                    <select class="form-control text1" style="color: black" name="productID">
-                        @foreach($st as $s)
-                            <option>{{$s}}</option>
-                        @endforeach
-                        @foreach($sp as $s)
-                            <option>{{$s}}</option>
-                        @endforeach
-                        @foreach($res as $s)
-                            <option>{{$s}}</option>
-                        @endforeach
-                        @foreach($lab as $s)
-                            <option>{{$s}}</option>
-                        @endforeach
-                    </select>
-                </div>
+                @if(count($st)>0 || count($sp)>0 || count($res)>0 || count($lab)>0)
+                    <div>
+                        {!! Form::Label('item', 'Product ID :-',['class'=>'text1']) !!}
+                        <select class="form-control text1" style="color: black" name="productID">
+                            @foreach($st as $s)
+                                <option>{{$s}}</option>
+                            @endforeach
+                            @foreach($sp as $s)
+                                <option>{{$s}}</option>
+                            @endforeach
+                            @foreach($res as $s)
+                                <option>{{$s}}</option>
+                            @endforeach
+                            @foreach($lab as $s)
+                                <option>{{$s}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                @else
+                    <button class="btn btn-primary btn-lg text1" disabled>Please enter the supplier details first
+                    </button>
+                @endif
             </div>
 
             <div class="form-group form-row">
@@ -44,20 +49,26 @@
             </div>
             <div class="form-group form-row">
                 <div>
-                    {!! Form::Label('item', 'Supplier:',['class'=>'text1']) !!}
-                    <select class="form-control text1" style="color: black" name="supplier">
-                        @foreach($suppliers as $supplier)
-                            <option>{{$supplier->supplierID}}</option>
-                        @endforeach
-
-                    </select>
+                    @if(count($suppliers)>0)
+                        {!! Form::Label('item', 'Supplier :-',['class'=>'text1']) !!}
+                        <select class="form-control text1" style="color: black" name="supplier" required>
+                            @foreach($suppliers as $supplier)
+                                <option>{{$supplier->supplierID}}</option>
+                            @endforeach
+                        </select>
+                    @else
+                        <button class="btn btn-primary btn-lg text1" disabled>Please enter the item details to the database
+                        </button>
+                    @endif
                 </div>
             </div>
-            {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
-            {!! Form::close() !!}
+            @if(count($suppliers)>0 && (count($st)>0 || count($sp)>0 || count($res)>0 || count($lab)>0))
+                {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
+                {!! Form::close() !!}
+            @endif
             <div class="text-center" style="margin-top: 30px">
-                <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
-                <a href="/expenses" class="btn btn-outline-info text1">Expenses</a>
+                <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+                <a href="/expenses" class="btn btn-outline-info text1">EXPENSES</a>
             </div>
         </div>
 

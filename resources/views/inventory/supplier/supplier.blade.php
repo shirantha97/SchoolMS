@@ -22,6 +22,7 @@
                         <th scope="col">Contact Details</th>
                         <th scope="col">Supply Item</th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,7 +33,7 @@
                                 <td> {{$supplier->email}}</td>
                                 <td> {{$supplier->contact_details}}</td>
                                 @if($supplier->type == 'S')
-                                    <td> Stationary</td>
+                                    <td> Stationery</td>
                                 @elseif($supplier->type == 'L')
                                     <td> Laboratary Equipments</td>
                                 @elseif($supplier->type == 'SP')
@@ -59,8 +60,8 @@
                     </tbody>
                 </table>
                 <div style="margin-top: 30px">
-                    <a href="/inventory" class="btn btn-primary text1">IINVENTORY DASHBOARD</a>
-                    <a href="/live_search" class="btn btn-primary text1">SEARCH</a>
+                    <a href="/inventory" class="btn btn-outline-info text1">IINVENTORY DASHBOARD</a>
+                    <a href="/live_search" class="btn btn-outline-info text1">SEARCH</a>
                 </div>
             @else
                 <div class="row">
@@ -75,7 +76,7 @@
                 <div style="margin-top: 15px">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+                            <a href="/inventory" class="btn btn-primary text1">INVENTORY DASHBOARD</a>
                         </div>
                     </div>
                 </div>
