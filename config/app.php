@@ -150,6 +150,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 //        ConsoleTVs\Charts\ChartsServiceProvider::class, //Charts
 
 
@@ -219,6 +220,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
 //        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
 

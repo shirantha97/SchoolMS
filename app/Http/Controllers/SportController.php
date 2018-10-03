@@ -31,7 +31,9 @@ class SportController extends Controller
      */
     public function create()
     {
-        return view('sports.create');
+        $teachers = User::where('role_id' , 2)->get();
+
+        return view('sports.create')->with('teachers' , $teachers);
     }
 
     /**

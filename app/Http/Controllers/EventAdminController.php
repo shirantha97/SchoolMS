@@ -13,7 +13,9 @@ class EventAdminController extends Controller
 {
     public function eventAdmin()
     {
-        return view('adminPages.eventAdmin');
+        $events = Event::all();
+
+        return view('adminPages.eventAdmin')->with('events' , $events);
     }
 
     public function societyAdmin()
@@ -24,5 +26,10 @@ class EventAdminController extends Controller
     public function sportAdmin()
     {
         return view('adminPages.sportsAdmin');
+    }
+
+    public function eventAdminHome()
+    {
+        return view('adminPages.eventAdminHome');
     }
 }

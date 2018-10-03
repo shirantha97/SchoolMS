@@ -93,7 +93,7 @@
                                         {{csrf_field()}}
                                         <input type="submit" class="btn btn-success col-10"
                                                value="Students enrolled for {{$sport->title}}"
-                                               name="user_id" placeholder="Enter Student ID">
+                                               name="user_id">
                                         <input value="{{$sport->id}}" type="hidden" name="sport_id">
                                         <input value="{{Auth()->user()->id}}" type="hidden" name="user_id">
                                     </div>
@@ -107,7 +107,7 @@
                         <div style="padding-top: 20px">
                             @if(auth()->user())
                                 @if(auth()->user()->role_id == 1)
-                                    @include('sports.adminsidebar');
+                                    {{--@include('sports.adminsidebar');--}}
                                 @endif
                             @endif
 
