@@ -49,6 +49,7 @@ Route::post('/Event/showEvent/{event}', 'EventController@updateImage');
 Route::get('/Event/calendar', 'EventController@calendar');
 Route::resource('Event' , 'EventController');
 
+Route::get('eventPDFHome' , 'EventAdminController@eventPDFHome');
 Route::get('pdfAllEvents', 'EventPDFController@index');
 Route::get('pdfMonthlyEvents', 'EventPDFController@monthlyEvents');
 Route::get('singleEvent', 'EventPDFController@singleEvent');

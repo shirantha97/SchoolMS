@@ -32,4 +32,11 @@ class EventAdminController extends Controller
     {
         return view('adminPages.eventAdminHome');
     }
+
+    public function eventPDFHome()
+    {
+        $events = Event::all();
+
+        return view ('event.eventPDFHome')->with('events' , $events);
+    }
 }
