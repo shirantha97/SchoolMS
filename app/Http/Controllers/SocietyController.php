@@ -122,8 +122,6 @@ class SocietyController extends Controller
         $society->meetingsOn = $newVal;
 
 
-
-
         $user = new User();
 
         $lastUser = DB::table('users')->orderBy('id', 'desc')->first();

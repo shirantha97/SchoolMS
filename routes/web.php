@@ -70,7 +70,14 @@ Route::post('Society/addStudent' , 'SocietyController@addStudent');
 Route::delete('Society/removeStudent' , 'SocietyController@removeStudent');
 Route::resource('Society' , 'SocietyController');
 
+<<<<<<< HEAD
 
+=======
+Route::get('eventAdmin' , 'EventAdminController@eventAdmin');
+Route::get('eventAdminHome' , 'EventAdminController@eventAdminHome');
+Route::get('societyAdmin' , 'EventAdminController@societyAdmin');
+Route::get('sportAdmin' , 'EventAdminController@sportAdmin');
+>>>>>>> 2850006995c7d8a29a95ca683106bb7d7dd90ec4
 //End of Event Routes
 
 

@@ -93,7 +93,7 @@
                                         {{csrf_field()}}
                                         <input type="submit" class="btn btn-success col-10"
                                                value="Students enrolled for {{$sport->title}}"
-                                               name="user_id" placeholder="Enter Student ID">
+                                               name="user_id">
                                         <input value="{{$sport->id}}" type="hidden" name="sport_id">
                                         <input value="{{Auth()->user()->id}}" type="hidden" name="user_id">
                                     </div>

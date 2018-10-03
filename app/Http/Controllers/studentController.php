@@ -41,9 +41,25 @@ class studentController extends Controller
         $student->email =  $request->email;
         $student->password = $request->password;
         
+        $user = new User();
+
+        $lastUser = DB::table('users')->orderBy('id', 'desc')->first();
+        $lastID = $lastUser->id;
+
+        $user->id = $lastID + 1;
+        $user->name = $request->name;
+        $user->email =$request->email;
+        $user->admin = 0 ;
+        $user->password = Hash::make(request('password'));
+        $user->role_id = 3 ;
+        $user->gender = $request->Gender;
+        $user->birthday =$request->BirthDay;
+
         $student->save();
 
-        $student = Student::all();
+        $user->save();
+
+        $user = Student::all();
        // return redirect('stdTable');
 
        return redirect('/std')->with('student',$student);
