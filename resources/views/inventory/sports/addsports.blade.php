@@ -24,22 +24,26 @@
             </div>
             <div class="form-group form-row">
                 <div>
-                    {!! Form::Label('item', 'Supplier :-',['class'=>'text1']) !!}
-                    <select class="form-control text1" style="color: black" name="supplier">
-                        @foreach($suppliers as $supplier)
-                            <option>{{$supplier->supplierID}}</option>
-                        @endforeach
-
-                    </select>
+                    @if(count($suppliers)>0)
+                        {!! Form::Label('item', 'Supplier :-',['class'=>'text1']) !!}
+                        <select class="form-control text1" style="color: black" name="supplier" required>
+                            @foreach($suppliers as $supplier)
+                                <option>{{$supplier->supplierID}}</option>
+                            @endforeach
+                        </select>
+                    @else
+                        <button class="btn btn-primary btn-lg text1" disabled>Please enter the supplier details first
+                        </button>
+                    @endif
                 </div>
             </div>
-            <div class="form-group form row">
+            @if(count($suppliers)>0)
                 {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
-            </div>
-            {!! Form::close() !!}
+                {!! Form::close() !!}
+            @endif
             <div style="margin-top: 30px" class="text-center">
-                <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
-                <a href="/inventorysports" class="btn btn-outline-info text1">Sports Items</a>
+                <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+                <a href="/inventorysports" class="btn btn-outline-info text1">SPORTS ITEMS</a>
             </div>
         </div>
 

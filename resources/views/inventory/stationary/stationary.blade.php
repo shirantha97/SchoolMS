@@ -83,7 +83,7 @@
                     </tbody>
                 </table>
                 <div style="margin-top: 30px">
-                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                    <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
                 </div>
             @else
                 <div class="row">
