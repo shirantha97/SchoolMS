@@ -48,7 +48,7 @@
                         <h3>Generate PDFs regarding Events</h3></p>
                         <div style="padding-top: 10%">
                             <h5>
-                                <li>Event Information</li>
+                                <li>Information regarding all events</li>
                             </h5>
                             <button class="btn"><a href="/pdfAllEvents"> Generate</a></button>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="row">
                         <div style="padding-top: 10%">
                             <h5>
-                                <li>PDFs on Monthly Expenses and Income</li>
+                                <li>PDFs on Monthly Expenses and Income of Events</li>
                             </h5>
                             <button class="btn"><a href="/pdfMonthlyEvents"> Generate</a></button>
                         </div>

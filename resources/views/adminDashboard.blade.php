@@ -153,7 +153,7 @@
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="/eventAdmin"> Go to Event Management</a></button>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="/eventAdminHome"> Go to Event Management</a></button>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm">
