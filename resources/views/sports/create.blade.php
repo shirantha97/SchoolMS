@@ -35,9 +35,12 @@
                         <label for="venue"><h6>Teacher In Charge</h6></label>
                         <input class="form-control col-6" name="teacherInCharge" type="Text" value="{{old('teacherInCharge')}}" list="teachers" placeholder="Select Teacher in Charge"  required/>
                         <datalist id="teachers">
+<<<<<<< HEAD
+=======
                             {{--<option value="School Main Hall">School Main Hall</option>--}}
                             {{--<option value="School Grounds">School Grounds</option>--}}
                             {{--<option value="Auditorium">Auditorium</option>--}}
+>>>>>>> 2850006995c7d8a29a95ca683106bb7d7dd90ec4
                             @if($teachers)
                                 @foreach($teachers as $teach)
                                     <option value="{{$teach->id}}"> Teacher Name is {{$teach->name}}</option>

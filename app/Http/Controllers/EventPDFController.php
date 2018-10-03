@@ -23,9 +23,11 @@ class EventPDFController extends Controller
     public function monthlyEvents()
     {
         $monthlyEvents = Event::selectRaw('year(from_date) year, monthname(from_date) month , sum(act_expense) exp, sum(act_income) inc')
-                ->groupBy('year', 'month')
-                ->orderByRaw('min(from_date)')
-                ->get();
+
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(from_date)')
+            ->get();
+
 
         $pdf = \PDF::loadView('event.pdfMonthlyEvents',compact('monthlyEvents'));
         return $pdf->download('pdfMonthlyEvents.pdf');
