@@ -61,7 +61,7 @@
                     </tbody>
                 </table>
                 <div style="margin-top: 15px">
-                    <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                    <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
                 </div>
             @else
                 <div class="row">
@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-6">
-                            <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
+                            <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
                         </div>
                     </div>
                 </div>
