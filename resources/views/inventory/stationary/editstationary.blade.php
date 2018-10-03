@@ -35,8 +35,8 @@
             {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
             {!! Form::close() !!}
             <div style="margin-top: 30px" class="text-center">
-                <a href="/inventory" class="btn btn-outline-info text1">Admin Dashboard</a>
-                <a href="/stationary" class="btn btn-outline-info text1">Stationary Items</a>
+                <a href="/inventory" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+                <a href="/stationary" class="btn btn-outline-info text1">STATIONERY ITEMS</a>
 
             </div>
 
