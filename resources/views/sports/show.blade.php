@@ -107,7 +107,7 @@
                         <div style="padding-top: 20px">
                             @if(auth()->user())
                                 @if(auth()->user()->role_id == 1)
-                                    @include('sports.adminsidebar');
+                                    {{--@include('sports.adminsidebar');--}}
                                 @endif
                             @endif
 

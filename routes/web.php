@@ -24,6 +24,12 @@ Route::group(['middleware' => 'auth'] , function () {
     Route::get("/adminDashboard", function () {
         return view('adminDashboard');
     });
+
+    Route::get('eventAdmin' , 'EventAdminController@eventAdmin');
+    Route::get('eventAdminHome' , 'EventAdminController@eventAdminHome');
+    Route::get('societyAdmin' , 'EventAdminController@societyAdmin');
+    Route::get('sportAdmin' , 'EventAdminController@sportAdmin');
+
 });
 
 Route::get('/home', 'HomeController@index');
@@ -43,6 +49,10 @@ Route::post('/Event/showEvent/{event}', 'EventController@updateImage');
 Route::get('/Event/calendar', 'EventController@calendar');
 Route::resource('Event' , 'EventController');
 
+Route::get('pdfAllEvents', 'EventPDFController@index');
+Route::get('pdfMonthlyEvents', 'EventPDFController@monthlyEvents');
+Route::get('singleEvent', 'EventPDFController@singleEvent');
+
 Route::post('Event/{event}/comment','CommentsController@store');
 Route::get('Sport/search','SportController@search');
 Route::get('Sport/createDemo','SportController@createDemo');
@@ -60,9 +70,7 @@ Route::post('Society/addStudent' , 'SocietyController@addStudent');
 Route::delete('Society/removeStudent' , 'SocietyController@removeStudent');
 Route::resource('Society' , 'SocietyController');
 
-Route::get('eventAdmin' , 'EventAdminController@eventAdmin');
-Route::get('societyAdmin' , 'EventAdminController@societyAdmin');
-Route::get('sportAdmin' , 'EventAdminController@sportAdmin');
+
 //End of Event Routes
 
 
