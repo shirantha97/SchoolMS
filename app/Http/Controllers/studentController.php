@@ -40,7 +40,8 @@ class studentController extends Controller
         $student->mobileNumber =  $request->MobileNumber;
         $student->email =  $request->email;
         $student->password = $request->password;
-        
+
+
         $student->save();
 
         $student = Student::all();
