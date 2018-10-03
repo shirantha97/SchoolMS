@@ -32,7 +32,7 @@
                 {{--@endif--}}
                 <div class="form-group">
                     <label for="venue"><h6>Teacher In Charge</h6></label>
-                    <input class="form-control" name="teacherInCharge" type="Text" value="{{old('teacherInCharge')}}" list="teachers" placeholder="Select Teacher in Charge"  required/>
+                    <input class="form-control col-6" name="teacherInCharge" type="Text" value="{{old('teacherInCharge')}}" list="teachers" placeholder="Select Teacher in Charge"  required/>
                     <datalist id="teachers">
                         {{--<option value="School Main Hall">School Main Hall</option>--}}
                         {{--<option value="School Grounds">School Grounds</option>--}}
