@@ -60,7 +60,6 @@
                 </table>
                 <div style="margin-top: 30px">
                     <a href="/inventory" class="btn btn-primary text1">IINVENTORY DASHBOARD</a>
-                    <a href="/supplier/create" class="btn btn-primary text1">ADD DETAILS</a>
                     <a href="/live_search" class="btn btn-primary text1">SEARCH</a>
                 </div>
             @else

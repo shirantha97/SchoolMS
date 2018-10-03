@@ -51,8 +51,8 @@
                 {{--</form>--}}
             {{--</div>--}}
             <div class="text-center" style="margin-top: 30px;">
-                <a href="/index" class="btn btn-outline-info text1">Admin Dashboard</a>
-                <a href="/supplier" class="btn btn-outline-info text1">Suppliers</a>
+                <a href="/index" class="btn btn-outline-info text1">INVENTORY DASHBOARD</a>
+                <a href="/supplier" class="btn btn-outline-info text1">SUPPLIERS</a>
             </div>
         </div>
 
